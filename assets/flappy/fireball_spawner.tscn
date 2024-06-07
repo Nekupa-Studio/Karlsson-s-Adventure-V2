@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0mhx2lcobuq0"]
+
+[ext_resource type="Script" path="res://scripts/flappy/fireball_spawner.gd" id="1_0cowt"]
+
+[node name="fireball_spawner" type="ReferenceRect"]
+offset_left = 269.0
+offset_top = -151.0
+offset_right = 443.0
+offset_bottom = 148.0
+pivot_offset = Vector2(-398, 148)
+script = ExtResource("1_0cowt")
+spawn_time = 2.0
+
+[node name="debug_rect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

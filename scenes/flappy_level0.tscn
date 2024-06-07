@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctirq7v8h7e67"]
+
+[ext_resource type="PackedScene" uid="uid://bhaa0o7hswdbq" path="res://assets/flappy/player_flappy.tscn" id="1_x6g0w"]
+[ext_resource type="PackedScene" uid="uid://d0mhx2lcobuq0" path="res://assets/flappy/fireball_spawner.tscn" id="2_ocsv5"]
+[ext_resource type="Script" path="res://scripts/flappy/flappy_ui.gd" id="3_s0efn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qikmr"]
+size = Vector2(106, 28)
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Player_Flappy" parent="." instance=ExtResource("1_x6g0w")]
+position = Vector2(-135, 2)
+
+[node name="fireball_spawner" parent="." instance=ExtResource("2_ocsv5")]
+offset_left = 270.0
+offset_right = 444.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("3_s0efn")
+
+[node name="main_ui_container" type="Control" parent="UI"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 603.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="progress_bar" type="ColorRect" parent="UI/main_ui_container"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 0
+offset_top = 593.0
+offset_bottom = 603.0
+mouse_filter = 2
+color = Color(0, 0.694118, 0.65098, 0.560784)
+
+[node name="out_of_bound" type="StaticBody2D" parent="." groups=["enemy"]]
+
+[node name="col_areas" type="Area2D" parent="out_of_bound"]
+
+[node name="you are" type="CollisionShape2D" parent="out_of_bound/col_areas"]
+position = Vector2(-143, 165)
+shape = SubResource("RectangleShape2D_qikmr")
+
+[node name="my enema" type="CollisionShape2D" parent="out_of_bound/col_areas"]
+position = Vector2(-130, -166)
+shape = SubResource("RectangleShape2D_qikmr")
+
+[connection signal="game_started" from="Player_Flappy" to="fireball_spawner" method="_on_game_start"]
+[connection signal="score_updated" from="Player_Flappy" to="UI" method="_on_player_flappy_score_updated"]

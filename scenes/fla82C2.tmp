@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctirq7v8h7e67"]
+
+[ext_resource type="PackedScene" uid="uid://bhaa0o7hswdbq" path="res://assets/flappy/player_flappy.tscn" id="1_x6g0w"]
+[ext_resource type="PackedScene" uid="uid://d0mhx2lcobuq0" path="res://assets/flappy/fireball_spawner.tscn" id="2_ocsv5"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Player_Flappy" parent="." instance=ExtResource("1_x6g0w")]
+position = Vector2(-135, 2)
+
+[node name="fireball_spawner" parent="." instance=ExtResource("2_ocsv5")]
+offset_left = 270.0
+offset_right = 444.0
+
+[connection signal="game_started" from="Player_Flappy" to="fireball_spawner" method="_on_game_start"]

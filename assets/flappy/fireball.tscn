@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://dws8ek12qigt"]
+
+[ext_resource type="Script" path="res://scripts/flappy/fireball_flappy.gd" id="1_4vevm"]
+[ext_resource type="Texture2D" uid="uid://bcb236eymbiwo" path="res://Import/new_sprites/particle/particles_fireball2.png" id="2_22rgj"]
+[ext_resource type="Texture2D" uid="uid://b6yvsav45to6e" path="res://Import/new_sprites/particle/particles_fireball3.png" id="3_w4fg2"]
+[ext_resource type="Texture2D" uid="uid://dw8c63ojfte7y" path="res://Import/new_sprites/particle/particles_fireball4.png" id="4_nnr8p"]
+[ext_resource type="Texture2D" uid="uid://dmivlp3c7x88j" path="res://Import/spiritface.png" id="5_hmlw2"]
+
+[sub_resource type="Curve" id="Curve_4t8b8"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.25, 0.846154), -1.56288, -1.56288, 0, 0, Vector2(0.661458, 0.351648), -1.0279, -1.0279, 0, 0, Vector2(1, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_of11s"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_278j3"]
+radius = 6.0
+
+[node name="fireball" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_4vevm")
+speed = 200
+
+[node name="root_particle" type="CPUParticles2D" parent="."]
+texture_filter = 1
+amount = 20
+lifetime = 0.8
+texture = ExtResource("2_22rgj")
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+angular_velocity_min = 50.0
+angular_velocity_max = 50.0
+scale_amount_curve = SubResource("Curve_4t8b8")
+color_ramp = SubResource("Gradient_of11s")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="second_particle" type="CPUParticles2D" parent="root_particle"]
+texture_filter = 1
+amount = 20
+lifetime = 0.5
+texture = ExtResource("3_w4fg2")
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+angular_velocity_min = 50.0
+angular_velocity_max = 50.0
+scale_amount_curve = SubResource("Curve_4t8b8")
+color_ramp = SubResource("Gradient_of11s")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="third_particle" type="CPUParticles2D" parent="root_particle"]
+texture_filter = 1
+amount = 20
+lifetime = 0.3
+texture = ExtResource("4_nnr8p")
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+angular_velocity_min = 50.0
+angular_velocity_max = 50.0
+scale_amount_curve = SubResource("Curve_4t8b8")
+color_ramp = SubResource("Gradient_of11s")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="hitbox_shape" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_278j3")
+
+[node name="face" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, 0)
+texture = ExtResource("5_hmlw2")
+flip_h = true
+flip_v = true

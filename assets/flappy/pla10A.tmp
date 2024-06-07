@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhaa0o7hswdbq"]
+
+[ext_resource type="Script" path="res://scripts/flappy/player_flappy.gd" id="1_5e24q"]
+[ext_resource type="SpriteFrames" uid="uid://o6ms5vynciyd" path="res://spriteframes/flappy/normal_karlsson_flying.tres" id="2_3l0xv"]
+[ext_resource type="Texture2D" uid="uid://dkvtmap34ee0p" path="res://Import/new_sprites/DeathParticle.png" id="8_7ywy8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dx8t"]
+size = Vector2(19, 25)
+
+[sub_resource type="Animation" id="Animation_tyg5u"]
+resource_name = "blink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hitbox:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:modulate")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.498039), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hyxal"]
+resource_name = "smollification"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"smoll_karlsson", &"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hitbox/hitbox_shape:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(11, 12), Vector2(19, 25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:jump_force")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-75, -150]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6b8lg"]
+_data = {
+"blink": SubResource("Animation_tyg5u"),
+"smollification": SubResource("Animation_hyxal")
+}
+
+[node name="Player_Flappy" type="CharacterBody2D"]
+script = ExtResource("1_5e24q")
+jump_force = null
+gravity = null
+
+[node name="collisions" type="CollisionShape2D" parent="."]
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("2_3l0xv")
+autoplay = "default"
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="hitbox_shape" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_7dx8t")
+
+[node name="death_particle" type="CPUParticles2D" parent="."]
+texture_filter = 1
+emitting = false
+amount = 20
+one_shot = true
+preprocess = 0.1
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.3
+texture = ExtResource("8_7ywy8")
+emission_shape = 1
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+scale_amount_min = 0.8
+scale_amount_max = 1.2
+
+[node name="skill_anims" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6b8lg")
+}
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
