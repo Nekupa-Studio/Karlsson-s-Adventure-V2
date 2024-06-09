@@ -51,3 +51,26 @@ Those will have **four properties**:
 - **cooldown**: time before next-use.
 - **anim**: name of the anim in the animation player.
 - **skill_ready**: true *(used by the player script)*.
+
+## Functions 
+
+### get_skill_names()
+
+This static method returns the keys of the dictionary storing the different skills. 
+
+```gdscript
+static func get_skill_names():
+	return SKILLS.keys()
+```
+
+### get_skill_data()
+
+This static method returns a new dictionary containing the informations about the wanted skill.
+
+Crashes the program if the skill doesn't exist.
+
+```gdscript
+static func get_skill_data(skill_name):
+	assert(skill_name in SKILLS.keys())
+	return SKILLS[skill_name].duplicate()
+```
