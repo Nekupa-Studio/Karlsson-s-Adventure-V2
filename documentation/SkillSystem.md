@@ -8,6 +8,8 @@
 
 Since most of the heavy work will be done through an [AnimationPlayer](https://docs.godotengine.org/en/stable/classes/class_animationplayer.html) which is able to run functions and change properties during its course, the **SkillSystem** class isn't planned to be very complex.
 
+It will simply hold the informations about skills and redistribute them to the player.
+
 ## Skills
 
 The class will have a **dictionary containing skill informations.** 
