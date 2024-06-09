@@ -15,7 +15,7 @@ var movement_types = [
 	"triangle_movement",
 	 "fall_movement"
 	]
-var movement
+var movement: String
 
 @export var speed: int = 120
 
@@ -27,7 +27,6 @@ var scale_: float
 
 var time: float = 0
 
-# TODO : match statement with movement to randomly determine values
 func _ready():
 	generate_properties()
 	propagate_scale()
@@ -37,8 +36,11 @@ func _ready():
 	if movement == "fall_movement":
 		velocity.y = -60
 
-# Procedurally make the fireball look where it's going
+
 func _process(delta):
+	"""
+	Procedurally make the fireball look where it's going
+	"""
 	particles.direction = velocity.normalized()
 	for particle in particles.get_children():
 		particle.direction = particles.direction
@@ -46,6 +48,9 @@ func _process(delta):
 	face.look_at(position + velocity)
 
 func _physics_process(delta):
+	"""
+	Move the fireball according to its random movement pattern.
+	"""
 	time += delta
 	velocity.x = -speed
 	
@@ -54,22 +59,12 @@ func _physics_process(delta):
 	move_and_slide()
 	fireball_culling()
 
-func cos_movement():
-	time = fmod(time, PI*2)
-	velocity.y = cos((time + phase) * puls) * amp
+""" -------------------------[Setup Functions]------------------------------ """
 
-func linear_movement():
-	pass
-
-func triangle_movement():
-	time = fmod(time, wave_time)
-	velocity.y = sign(time - wave_time/2) * amp
-
-func fall_movement():
-	# TODO: same, do not hardcode this and do better
-	velocity.y += 0.7
-	
 func generate_properties():
+	"""
+	Initialise the fireball's property randomly.
+	"""
 	movement = movement_types.pick_random()
 	
 	phase = randf_range(0,2)
@@ -80,6 +75,11 @@ func generate_properties():
 	scale_ = randf_range(1,1.75)
 
 func propagate_scale():
+	"""
+	Make the fireball faster the smaller it is.
+	Also spread the scale to each particles.
+	"""
+	
 	# Bigger the scale slower the fireball
 	speed *= 1/scale_
 
@@ -91,13 +91,47 @@ func propagate_scale():
 		particle.scale_amount_max = scale_
 	hitbox.scale = Vector2(scale_, scale_)
 	
-# make it so that there is as many particles as needed, not more.
 func setup_particles():
+	"""
+	Increase the number of particles of the fireball according to its speed.
+	"""
 	particles.amount = int(speed / 10)
 	for particle in particles.get_children():
 		particle.amount = particles.amount
 
-# cull fireballs outside of camera
+""" -------------------------[Culling Function]----------------------------- """
+
 func fireball_culling():
-	if position.x < CULL_DISTANCE or position.y > -CULL_DISTANCE:
-		queue_free()
+	"""
+	When out of bound, remove the fireball from tree.
+	"""
+	if position.x >= CULL_DISTANCE and position.y <= -CULL_DISTANCE: return
+	
+	queue_free()
+
+""" ------------------------[Movement Functions]---------------------------- """
+
+func cos_movement():
+	"""
+	Moves the fireball in the style of a cosine graph.
+	"""
+	time = fmod(time, PI*2)
+	velocity.y = cos((time + phase) * puls) * amp
+
+func linear_movement():
+	pass
+
+func triangle_movement():
+	"""
+	Moves the fireball in the style of a triangle wave graph.
+	"""
+	time = fmod(time, wave_time)
+	velocity.y = sign(time - wave_time/2) * amp
+
+func fall_movement():
+	"""
+	Moves the fireball like a free fall.
+	"""
+	# TODO: same, do not hardcode this and do better
+	velocity.y += 0.7
+	

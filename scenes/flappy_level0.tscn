@@ -13,7 +13,7 @@ size = Vector2(106, 28)
 zoom = Vector2(2, 2)
 
 [node name="Player_Flappy" parent="." instance=ExtResource("1_x6g0w")]
-position = Vector2(-135, 2)
+position = Vector2(-130, 2)
 
 [node name="fireball_spawner" parent="." instance=ExtResource("2_ocsv5")]
 offset_left = 270.0
@@ -44,7 +44,7 @@ color = Color(0, 0.694118, 0.65098, 0.560784)
 [node name="col_areas" type="Area2D" parent="out_of_bound"]
 
 [node name="you are" type="CollisionShape2D" parent="out_of_bound/col_areas"]
-position = Vector2(-143, 165)
+position = Vector2(-130, 165)
 shape = SubResource("RectangleShape2D_qikmr")
 
 [node name="my enema" type="CollisionShape2D" parent="out_of_bound/col_areas"]
