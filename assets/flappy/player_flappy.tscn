@@ -82,7 +82,7 @@ _data = {
 
 [node name="Player_Flappy" type="CharacterBody2D"]
 script = ExtResource("1_5e24q")
-skill_name = "blink"
+skill_name = "smollification"
 
 [node name="collisions" type="CollisionShape2D" parent="."]
 
