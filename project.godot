@@ -30,6 +30,18 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Karlsson-s Adventure V2"
 
+[file_customization]
+
+folder_colors={
+"res://Fonts/": "green",
+"res://Import/": "yellow",
+"res://assets/": "red",
+"res://documentation/": "gray",
+"res://scenes/": "blue",
+"res://scripts/": "purple",
+"res://spriteframes/": "pink"
+}
+
 [input]
 
 jump={
