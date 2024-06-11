@@ -184,7 +184,7 @@ Currently there are **four movement types**:
 $$\text{time} = \text{time}\mod{2\pi}$$
 - **linear_movement()**: which is just a `pass` since nothing needs to be done.
 - **triangle_movement()**: work in modular time (float) using `fmod()`
-$$\text{time} = \text{time}\mod{\text{wave\_time}}$$
+$$\text{time} = \text{time}\mod{\text{wave\textunderscore time}}$$
 - **fall_movement()**: applies a vertical acceleration to fireball.
 
 ```gdscript
