@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkvtmap34ee0p"
-path="res://.godot/imported/DeathParticle.png-e4cd75253e435f2c706a4eeca2485ede.ctex"
+path="res://.godot/imported/DeathParticle.png-4d0aad495ac888418b014ecda8b82c51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/new_sprites/DeathParticle.png"
-dest_files=["res://.godot/imported/DeathParticle.png-e4cd75253e435f2c706a4eeca2485ede.ctex"]
+source_file="res://import/new_sprites/DeathParticle.png"
+dest_files=["res://.godot/imported/DeathParticle.png-4d0aad495ac888418b014ecda8b82c51.ctex"]
 
 [params]
 

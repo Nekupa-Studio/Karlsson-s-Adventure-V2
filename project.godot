@@ -13,7 +13,7 @@ config_version=5
 config/name="Karlsson's Adventure V2"
 run/main_scene="res://scenes/flappy_level0.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Import/new_sprites/smollkarlssonicon.png"
+config/icon="res://import/new_sprites/smollkarlssonicon.png"
 
 [debug]
 
@@ -33,10 +33,10 @@ project/assembly_name="Karlsson-s Adventure V2"
 [file_customization]
 
 folder_colors={
-"res://Fonts/": "green",
-"res://Import/": "yellow",
 "res://assets/": "red",
 "res://documentation/": "gray",
+"res://fonts/": "green",
+"res://import/": "yellow",
 "res://scenes/": "blue",
 "res://scripts/": "purple",
 "res://spriteframes/": "pink"

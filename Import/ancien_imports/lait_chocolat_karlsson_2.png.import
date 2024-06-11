@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4dy4y2cdw1y3"
-path="res://.godot/imported/lait_chocolat_karlsson_2.png-b4daaac18aa26e2aae109032abbb4126.ctex"
+path="res://.godot/imported/lait_chocolat_karlsson_2.png-73630cfbefb7d1639d2529806dfac0a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/lait_chocolat_karlsson_2.png"
-dest_files=["res://.godot/imported/lait_chocolat_karlsson_2.png-b4daaac18aa26e2aae109032abbb4126.ctex"]
+source_file="res://import/ancien_imports/lait_chocolat_karlsson_2.png"
+dest_files=["res://.godot/imported/lait_chocolat_karlsson_2.png-73630cfbefb7d1639d2529806dfac0a3.ctex"]
 
 [params]
 

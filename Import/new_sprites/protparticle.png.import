@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d22obp27kshan"
-path="res://.godot/imported/protparticle.png-26ad1437435f0e93f948db255aa1d397.ctex"
+path="res://.godot/imported/protparticle.png-314987b42b1889cb45c9b245dc9ef2cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/new_sprites/protparticle.png"
-dest_files=["res://.godot/imported/protparticle.png-26ad1437435f0e93f948db255aa1d397.ctex"]
+source_file="res://import/new_sprites/protparticle.png"
+dest_files=["res://.godot/imported/protparticle.png-314987b42b1889cb45c9b245dc9ef2cf.ctex"]
 
 [params]
 

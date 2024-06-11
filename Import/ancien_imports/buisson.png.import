@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsi6jwhec14gs"
-path="res://.godot/imported/buisson.png-156de34355053e23440e562a5594320a.ctex"
+path="res://.godot/imported/buisson.png-f09acf553d9d64a02eb4015a4ba7fbc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/buisson.png"
-dest_files=["res://.godot/imported/buisson.png-156de34355053e23440e562a5594320a.ctex"]
+source_file="res://import/ancien_imports/buisson.png"
+dest_files=["res://.godot/imported/buisson.png-f09acf553d9d64a02eb4015a4ba7fbc0.ctex"]
 
 [params]
 

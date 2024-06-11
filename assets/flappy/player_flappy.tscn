@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/flappy/player_flappy.gd" id="1_5e24q"]
 [ext_resource type="SpriteFrames" uid="uid://o6ms5vynciyd" path="res://spriteframes/flappy/normal_karlsson_flying.tres" id="2_3l0xv"]
-[ext_resource type="Texture2D" uid="uid://dkvtmap34ee0p" path="res://Import/new_sprites/DeathParticle.png" id="8_7ywy8"]
+[ext_resource type="Texture2D" uid="uid://dkvtmap34ee0p" path="res://import/new_sprites/DeathParticle.png" id="8_7ywy8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dx8t"]
 size = Vector2(19, 25)

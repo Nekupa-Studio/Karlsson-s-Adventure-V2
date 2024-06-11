@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gmyxklhp5c6c"
-path="res://.godot/imported/smollkarlssonprot5.png-fb1cb6bbca0f3459a49ff18ad3e0f4be.ctex"
+path="res://.godot/imported/smollkarlssonprot5.png-7164a6136f76ce7ad6643afa81d3ab11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/new_sprites/smoll_karlsson_flying/smollkarlssonprot5.png"
-dest_files=["res://.godot/imported/smollkarlssonprot5.png-fb1cb6bbca0f3459a49ff18ad3e0f4be.ctex"]
+source_file="res://import/new_sprites/smoll_karlsson_flying/smollkarlssonprot5.png"
+dest_files=["res://.godot/imported/smollkarlssonprot5.png-7164a6136f76ce7ad6643afa81d3ab11.ctex"]
 
 [params]
 

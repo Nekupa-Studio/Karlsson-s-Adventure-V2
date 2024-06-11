@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drcfu7lnthgkn"
-path="res://.godot/imported/buisson_enflamer_1.png-3094aed9fb8ced5c515d711c17d34927.ctex"
+path="res://.godot/imported/buisson_enflamer_1.png-e33eb160ecfdf3db06a1742dde42795e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/buisson_enflamer_1.png"
-dest_files=["res://.godot/imported/buisson_enflamer_1.png-3094aed9fb8ced5c515d711c17d34927.ctex"]
+source_file="res://import/ancien_imports/buisson_enflamer_1.png"
+dest_files=["res://.godot/imported/buisson_enflamer_1.png-e33eb160ecfdf3db06a1742dde42795e.ctex"]
 
 [params]
 

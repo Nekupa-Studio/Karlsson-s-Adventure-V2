@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtu1x2uojgmeo"
-path="res://.godot/imported/KarlssonDead.png-abb9c6af21328c98798ec0bb587554b1.ctex"
+path="res://.godot/imported/KarlssonDead.png-437e600ed80d69a71a0cc6fadbeb74df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/KarlssonDead.png"
-dest_files=["res://.godot/imported/KarlssonDead.png-abb9c6af21328c98798ec0bb587554b1.ctex"]
+source_file="res://import/ancien_imports/KarlssonDead.png"
+dest_files=["res://.godot/imported/KarlssonDead.png-437e600ed80d69a71a0cc6fadbeb74df.ctex"]
 
 [params]
 

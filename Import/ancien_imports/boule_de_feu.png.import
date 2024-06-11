@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deqo6t0v80k2l"
-path="res://.godot/imported/boule_de_feu.png-25c91189ff9af333370c234e1e926152.ctex"
+path="res://.godot/imported/boule_de_feu.png-9cd97be9df2b15a7b2e9670e41ca974e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/boule_de_feu.png"
-dest_files=["res://.godot/imported/boule_de_feu.png-25c91189ff9af333370c234e1e926152.ctex"]
+source_file="res://import/ancien_imports/boule_de_feu.png"
+dest_files=["res://.godot/imported/boule_de_feu.png-9cd97be9df2b15a7b2e9670e41ca974e.ctex"]
 
 [params]
 

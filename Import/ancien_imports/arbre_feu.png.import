@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sfk81178cjy4"
-path="res://.godot/imported/arbre_feu.png-80ec1eeefb65645621ea4d1bb9e6b43a.ctex"
+path="res://.godot/imported/arbre_feu.png-5cc8a999014a0cdd033ef947738337c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/arbre_feu.png"
-dest_files=["res://.godot/imported/arbre_feu.png-80ec1eeefb65645621ea4d1bb9e6b43a.ctex"]
+source_file="res://import/ancien_imports/arbre_feu.png"
+dest_files=["res://.godot/imported/arbre_feu.png-5cc8a999014a0cdd033ef947738337c1.ctex"]
 
 [params]
 

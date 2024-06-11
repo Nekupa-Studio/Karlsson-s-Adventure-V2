@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfgkpphmhcv36"
-path="res://.godot/imported/Karlsson.png-f8835f05e886aa017bb0ad60464d1cd9.ctex"
+path="res://.godot/imported/Karlsson.png-3e6a5a0b890dac297d05596df054b34e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/Karlsson.png"
-dest_files=["res://.godot/imported/Karlsson.png-f8835f05e886aa017bb0ad60464d1cd9.ctex"]
+source_file="res://import/ancien_imports/Karlsson.png"
+dest_files=["res://.godot/imported/Karlsson.png-3e6a5a0b890dac297d05596df054b34e.ctex"]
 
 [params]
 

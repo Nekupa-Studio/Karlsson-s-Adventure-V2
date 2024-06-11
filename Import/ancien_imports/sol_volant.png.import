@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chnim2p25jojd"
-path="res://.godot/imported/sol_volant.png-6ccd82309235cdddb61797e12aac2f02.ctex"
+path="res://.godot/imported/sol_volant.png-845af7ace85b4f188078c24fe05ed4e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/sol_volant.png"
-dest_files=["res://.godot/imported/sol_volant.png-6ccd82309235cdddb61797e12aac2f02.ctex"]
+source_file="res://import/ancien_imports/sol_volant.png"
+dest_files=["res://.godot/imported/sol_volant.png-845af7ace85b4f188078c24fe05ed4e6.ctex"]
 
 [params]
 

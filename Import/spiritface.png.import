@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmivlp3c7x88j"
-path="res://.godot/imported/spiritface.png-2d164e9c2e20b5aa321cf86acb865969.ctex"
+path="res://.godot/imported/spiritface.png-be571d35541931683f02cfb1fb32682f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/spiritface.png"
-dest_files=["res://.godot/imported/spiritface.png-2d164e9c2e20b5aa321cf86acb865969.ctex"]
+source_file="res://import/spiritface.png"
+dest_files=["res://.godot/imported/spiritface.png-be571d35541931683f02cfb1fb32682f.ctex"]
 
 [params]
 

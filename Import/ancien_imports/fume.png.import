@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3fuqbokgdeak"
-path="res://.godot/imported/fume.png-0f15d65166df7646f937f4f3e4768c84.ctex"
+path="res://.godot/imported/fume.png-f39d12165d615a589131e7f6574e3adf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/fume.png"
-dest_files=["res://.godot/imported/fume.png-0f15d65166df7646f937f4f3e4768c84.ctex"]
+source_file="res://import/ancien_imports/fume.png"
+dest_files=["res://.godot/imported/fume.png-f39d12165d615a589131e7f6574e3adf.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deg2hj4molaq7"
-path="res://.godot/imported/Brique_de_lait_.png-1d0e090ed0307f7a779216074304f9cc.ctex"
+path="res://.godot/imported/Brique_de_lait_.png-baef79bbaaf996c6738d1d26eda0411d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/ancien_imports/Brique_de_lait_.png"
-dest_files=["res://.godot/imported/Brique_de_lait_.png-1d0e090ed0307f7a779216074304f9cc.ctex"]
+source_file="res://import/ancien_imports/Brique_de_lait_.png"
+dest_files=["res://.godot/imported/Brique_de_lait_.png-baef79bbaaf996c6738d1d26eda0411d.ctex"]
 
 [params]
 

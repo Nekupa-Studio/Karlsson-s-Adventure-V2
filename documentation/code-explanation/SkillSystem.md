@@ -1,4 +1,4 @@
-# [SkillSystem](../scripts/flappy/skill_system.gd)
+# [📜 SkillSystem 📜](../scripts/flappy/skill_system.gd)
 
 > 🚨 Since the game is still in **prototyping phase** we're still **unable to determine whether this system is final**
 
