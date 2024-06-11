@@ -4,8 +4,8 @@
 [ext_resource type="SpriteFrames" uid="uid://o6ms5vynciyd" path="res://spriteframes/flappy/normal_karlsson_flying.tres" id="2_3l0xv"]
 [ext_resource type="Texture2D" uid="uid://dkvtmap34ee0p" path="res://import/new_sprites/DeathParticle.png" id="8_7ywy8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dx8t"]
-size = Vector2(19, 25)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6nik"]
+height = 25.5
 
 [sub_resource type="Animation" id="Animation_tyg5u"]
 resource_name = "blink"
@@ -52,26 +52,38 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("hitbox/hitbox_shape:shape:size")
-tracks/1/interp = 1
+tracks/1/path = NodePath(".:jump_force")
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(11, 12), Vector2(19, 25)]
+"values": [-75, -150]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath(".:jump_force")
-tracks/2/interp = 0
+tracks/2/path = NodePath("hitbox/hitbox_shape:shape:radius")
+tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [-75, -150]
+"values": [5.0, 10.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hitbox/hitbox_shape:shape:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12.75, 25.5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6b8lg"]
@@ -94,7 +106,7 @@ autoplay = "default"
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="hitbox_shape" type="CollisionShape2D" parent="hitbox"]
-shape = SubResource("RectangleShape2D_7dx8t")
+shape = SubResource("CapsuleShape2D_d6nik")
 
 [node name="death_particle" type="CPUParticles2D" parent="."]
 texture_filter = 1
